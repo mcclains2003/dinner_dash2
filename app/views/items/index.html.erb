@@ -1,0 +1,11 @@
+<h1>Menu Items:</h1>
+
+  <ul>
+    <% @items.each do |item| %>
+      <li>
+        <h2><%= link_to item.title, @item %></h2>
+        <%= item.description %><br />
+        <h4><%= number_to_currency item.price, :unit => '$' %></h4>
+      </li>
+    <% end %>  
+  </ul>
